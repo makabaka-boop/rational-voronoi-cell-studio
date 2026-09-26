@@ -1,0 +1,11 @@
+# Docker Compose:cells 服务托管站点编辑器页面（纯前端，离线可用）
+services:
+  cells:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: voronoi-cells:latest
+    container_name: voronoi-cells
+    ports:
+      - "8080:80"
+    restart: unless-stopped
